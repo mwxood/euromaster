@@ -1,0 +1,85 @@
+.compare-section {
+    .compare-holder {
+        @extend .d-flex;
+        @extend .align-items-end;
+        margin-top: 47px;
+        margin-bottom: 30px;
+    }
+
+    .compare-text {
+        max-width: 160px;
+        width: 100%;
+        margin-right: 147px;
+    }
+
+    .compare-title {
+        font-weight: 800;
+        font-size: 14px;
+        margin-right: 254px;
+    }
+
+    .comtare-image {
+        display: block;
+    }
+
+    .comtare-num {
+        font-size: 12px;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .compare-desc {
+        display: block;
+        font-weight: 800;
+        font-size: 12px;
+    }
+
+    .table-compare, .table, table {
+        width: 100%;
+        // border-collapse: collapse;
+        text-align: left;
+        border-spacing: 0;
+
+        thead {
+            tr {
+               
+                font-weight: 800;
+                color: #c4161c;
+                th {
+                    padding: 36px 0;
+                    border-top: 1px solid #004282;
+                    border-bottom: 1px solid #c4161c;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                &:nth-child(even) {
+                    background: #f4f4f4;
+                }
+            }
+
+            td {
+                padding: 26px 17px;
+                font-size: 14px;
+                width: 50px;
+                &:first-child {
+                    width: 300px;
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1094px) {
+    .compare-holder {
+        flex-wrap: wrap;
+        .compare-title {
+            margin-right: 0;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+    }
+}

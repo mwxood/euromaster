@@ -24,13 +24,16 @@
 }
 
 .custom-container {
-  width: 90%;
+  max-width: 1860px;
   margin: auto;
-  padding: 0 31px
+  padding: 0 20px
+}
+
+.custom-container.small-container {
+  max-width: 1546px;
 }
 
 .custom-btn {
-  background: $primary-color;
   border: none;
   transition: all .3s;
   padding: 10px 20px;
@@ -38,6 +41,14 @@
     margin-left: 10px;
   }
   &:hover {
-      background: $footer-bottom;
+
+  }
+}
+
+a {
+  text-decoration: none;
+  transition: all .3s;
+  &:hover {
+    color: $hover;
   }
 }

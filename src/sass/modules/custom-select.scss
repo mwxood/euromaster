@@ -1,0 +1,55 @@
+.custom-select {
+    position: relative;
+    font-size: 12px;
+    min-width: 128px;
+  }
+  
+  .custom-select select {
+    display: none;
+  }
+  
+  .select-selected {
+    border: 1px solid $border-color;
+  }
+  
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 6px;
+    height: 8px;
+    background: url('../img/down-icon.png') no-repeat;
+  }
+  
+  .select-selected.select-arrow-active:after {
+    transform: rotate(-180deg);
+  
+  }
+  
+  .select-items div,.select-selected {
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #aeaeae;
+    //top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    overflow-y: auto;
+    max-height: 200px;
+  }
+  
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }

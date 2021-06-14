@@ -5,6 +5,22 @@
 @import 'fonts';
 @import 'variables';
 @import 'helper';
+@import 'modules/header';
+@import 'modules/navigation';
+@import 'modules/top-slider';
+@import 'modules/content';
+@import 'modules/news';
+@import 'modules/brands';
+@import 'modules/about';
+@import 'modules/category';
+@import 'modules/custom-select';
+@import 'modules/checkbox';
+@import 'modules/compare';
+@import 'modules/contact';
+
+
+@import 'modules/footer';
+
 
 img {max-width: 100%;}
 
@@ -14,10 +30,11 @@ img {max-width: 100%;}
   box-sizing: border-box;
 }
 
+html, body {overflow-x: hidden;}
+
 body {
-  background: $bg-color;
-  color: $text-color;
-  font-family: $regular;
+  font-family: $open-sans;
+  color: #333;
 }
 
 p {
@@ -26,4 +43,132 @@ p {
 
 p + p {
   margin-top: 10px;
+}
+
+
+img {
+  vertical-align: middle;
+}
+
+.btn {
+  padding: 21px 25px;
+  display: inline-block;
+}
+
+.about-btn {
+  border: 4px solid #cc0033;
+  color: #cc0033;
+  max-width: 313px;
+  width: 100%;
+  position: relative;
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 23px;
+    width: 18px;
+    svg {
+      fill: #cc0033;
+     }
+  }
+
+  &:hover {
+    border-color: #004282;
+    color: #004282;
+    svg {
+      fill: #004282;
+    }
+  }
+}
+
+.form-group {
+  @extend .d-flex;
+  label {
+    width: 100%;
+  }
+}
+
+.searcgh-overlay {
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.contact-form {
+  margin-top: 15px;
+  .form-group {
+   justify-content: space-between;
+   margin-bottom: 23px;
+      label, .custom-select {
+        max-width: 285px;
+        width: 100%;
+      }
+
+
+      .select-items div, .select-selected {
+        padding: 16px 16px;
+      }
+
+      .select-selected {
+        border-color: #666;
+      }
+
+      .select-selected:after {
+        top: 21px;
+      }
+  }
+
+
+  .message {
+    min-height: 157px;
+    margin: 15px; 
+    margin: 0;
+  }
+
+  .captcha-holder {
+    display: flex;
+    margin-top: 22px;
+  }
+
+  .captcha {
+    max-width: 304px;
+    width: 100%;
+    margin-right: 23px;
+  }
+
+  .input-submit {
+    background: #cc0033;
+    color: #fff;
+    font-weight: 800;
+    font-size: 14px;
+    max-width: 284px;
+    width: 100%;
+    padding: 28px 0;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background .3s;
+    &:hover {
+      background:#004282;
+    }
+  }
+}
+
+.input-bg {
+  border: 1px solid #aeaeae;
+  padding: 17px 15px;
+  width: 100%;
+  color: #666666;
+  font-size: 14px;
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: #666666;
+    font-size: 14px;
+  }
 }
