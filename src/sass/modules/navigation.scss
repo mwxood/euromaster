@@ -121,15 +121,14 @@
 .hamburger {
     width: 25px;
     height: 22px;
-    display: none;
+    display: block;
     position: relative;
     cursor: pointer;
     z-index: 11;
-    color: #004282;
-    margin-right: 10px;
+    color: #fff;
     span {
       display: block;
-      background: #004282;
+      background: #fff;
       width: 25px;
       height: 3px;
       position: absolute;
@@ -139,7 +138,7 @@
         content: "";
         position: absolute;
         display: block;
-        background: #004282;
+        background: #fff;
         width: 25px;
         height: 3px;
         transition: transform .3s;
@@ -181,44 +180,115 @@
     z-index: 10;
 }
 
+.hamburger-holder, .mobile-btn {display: none;}
+.social-mobile {display: none;}
+.social-mobile {
+    margin-left: 64px;
+    align-items: center;
+    .social-title {
+        margin-right: 10px;
+    }
+    .social {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        svg {
+            width: 13px;
+            fill: #666666;
+            path {
+                fill: #666666 !important;
+            }
+        }
+        li {
+            margin-right: 10px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
 @media (max-width: 1448px) {
-    .hamburger {
+    .header-top-social.social-desktop{
+        display: none !important;
+    }
+
+    .social-mobile {display: flex;}
+
+    .hamburger-holder {
         display: block;
+        background: #cc0033;
+        padding: 21px 21px;
+        position: relative;
+    }
+
+    .header .mobile-btn {
+        width: 100%;
+        display: block;
+        margin-left: 64px;
+        margin-bottom: 20px;
+       .header-btn {
+            display: flex;
+            justify-content: center !important;
+            height: auto;
+            max-width: 305px;
+       }
+    }
+
+
+    .nav-active {
+        .nav-holder { 
+            z-index: -1;
+        } 
+
+        .header {box-shadow: none;     border-bottom: 1px solid #6e716f;}
     }
 
     .nav-holder {
         position: fixed;
-        background: #fff;
-        width: 100%;
+        background: #f7f7f7;
         height: 100%;
+        width: 100%;
         top: 0;
         left: 0;
-        z-index: 3;
-        justify-content: center;
+        z-index: 2;
         display: none;
-        align-items: center;
+        align-items: baseline;
+        flex-wrap: wrap;
+        padding-top: 100px;
+
+        .mobile-nav-scroll {
+            max-height: 335px;
+            overflow: auto;
+            padding-bottom: 30px;
+        }
 
         .nav {
             flex-wrap: wrap;
-            text-align: center;
+            position: relative;
+            margin-top: 20px;
+            padding: 0 64px;
+            margin-bottom: 37px;
+
+            li {
+                line-height: 0;
+                a {
+                    padding: 0;
+                }
+            }
 
             .drop-down {
                 display: none !important;
                 position: absolute;
                 top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: #fff;
-                width: 800px;
-                max-height: 500px;
-                height: 100%;
+                left: 0;
+                transform: translateY(-50%);
+                background: #f7f7f7;
+                width: 100%;
+                max-height: 281px;
                 overflow-y: auto;
-                justify-content: center;
                 border: none;
                 li {
-                    a {
-                        justify-content: center;
-                    }
+
                 }
             }
 
@@ -248,6 +318,28 @@
 
     .nav-active  {
         overflow: hidden;
-        .nav-holder {display: flex;}
+        .nav-holder {display: block;}
+    }
+}
+
+@media (max-width: 681px) {
+    .nav-holder {
+        padding-top: 130px;
+    }
+}
+
+@media (max-width: 554px) {
+    .header .mobile-btn .header-btn {
+        max-width: inherit;
+        width: 100%;
+    }
+
+    .header .mobile-btn {
+        margin-left: 0;
+        padding: 0 20px;
+    }
+
+    .social-mobile {
+        margin-left: 20px;
     }
 }

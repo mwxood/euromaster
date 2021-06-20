@@ -69,7 +69,7 @@ const navigation = () => {
     
 
     const mobileNavigation = () => {
-        const navTrigger = document.querySelector('.hamburger');
+        const navTrigger = document.querySelector('.hamburger-holder');
 
         try {
             navTrigger.addEventListener('click', () => {

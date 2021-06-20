@@ -1,0 +1,74 @@
+.misia-section {
+    .category {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .misia-check {
+        border-bottom: 1px solid #d8d8d8;
+        padding-bottom: 58px;
+        margin-bottom: 45px;
+        margin-top: 30px;
+    }
+
+    
+}
+
+.misia-check {
+    
+    .check {
+        list-style: none;
+        @extend .d-flex;
+        margin: 30px 0;
+        li {
+            margin-right: 84px;
+            @extend .d-flex;
+            align-items: center;
+            .check-num {
+                font-size: 49px;
+                color: #c4161c;
+                margin-right: 17px;
+            }
+            .check-text {
+                color: #004282;
+                font-size: 18px;
+                max-width: 190px;
+                width: 100%;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.misia-checklist {
+    margin: 30px 0;
+    .checklist {
+        list-style: none;
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 28px;
+            .ckeck-img {
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 983px) {
+    .misia-check .check li .check-text {
+        max-width: inherit;
+    }
+}
+
+
+@media (max-width:835px) {
+    .misia-check .check {
+        flex-wrap: wrap;
+        li {
+            margin-bottom: 20px;
+        }
+    }
+}
